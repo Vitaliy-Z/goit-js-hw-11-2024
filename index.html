@@ -4,17 +4,17 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/goit-js-hw-11-2024/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HW-10</title>
-    <link rel="stylesheet" crossorigin href="/goit-js-hw-11-2024/assets/index-DNLjaGaT.css">
+    <title>HW-11</title>
+    <script type="module" crossorigin src="/goit-js-hw-11-2024/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-11-2024/assets/vendor-B07T6_gy.js">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-11-2024/assets/index-hSYUqc6H.css">
   </head>
   <body>
-    <div class="container"></div>
-
     <main>
       <section class="vite-promo">
   <div class="container">
     <h1 class="main-title">
-      <span class="main-title-gradient">Home Work - 11</span>
+      <span class="main-title-gradient">Search for photos</span>
       created by
       <a
         class="main-title-link"
@@ -27,6 +27,22 @@
   </div>
 </section>
 
+
+      <div class="container">
+        <form class="search-form">
+          <input
+            class="search-input"
+            type="text"
+            name="userQuery"
+            required
+            placeholder="Search images..."
+            autocomplete="off"
+          />
+          <button class="search-btn" type="submit">Search</button>
+        </form>
+        <ul class="gallery visually-hidden"></ul>
+        <span class="loader visually-hidden">Loading</span>
+      </div>
     </main>
   </body>
 </html>
