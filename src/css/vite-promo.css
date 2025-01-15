@@ -3,7 +3,7 @@
 }
 .vite-promo-thumb {
   position: relative;
-  max-width: 320px;
+  max-width: 200px;
   margin: 0 auto;
 }
 .vite-promo-thumb::before {
@@ -25,16 +25,11 @@
 }
 .main-title-gradient {
   display: block;
-  font-size: 2em;
+  font-size: 2.5em;
   background-image: linear-gradient(120deg, #bd34fe 30%, #41d1ff);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-}
-@media only screen and (min-width: 768px) {
-  .main-title-gradient {
-    font-size: 3em;
-  }
 }
 .main-title-link {
   position: relative;

@@ -9,10 +9,10 @@
 @import url('./base.css');
 @import url('./container.css');
 @import url('./animations.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* Sections style */
 @import url('./header.css');
 @import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+@import url('./gellery.css');
