@@ -45,7 +45,9 @@ function onSubmit(evt) {
         message: 'Please, try again',
       });
     })
-    .finally(formEl.reset(), isLoaderON(false));
+    .finally(() => {
+      formEl.reset(), isLoaderON(false);
+    });
 }
 
 function isLoaderON(bool) {
