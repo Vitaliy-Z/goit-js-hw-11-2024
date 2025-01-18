@@ -24,34 +24,30 @@ function onSubmit(evt) {
       message: 'Please, enter your search query!',
     });
     formEl.reset();
-
     return;
   }
-
   isGalleryShow(false);
   isLoaderON(true);
 
-  // To simulate a delay from the server
-  setTimeout(() => {
-    searchHendler(userQuery)
-      .finally(formEl.reset(), isLoaderON(false))
-      .then(data => {
-        if (data.length === 0)
-          iziToast.error({
-            message:
-              'Sorry, there are no images matching your search query. Please try again!',
-          });
-        renderImg(data);
-        isGalleryShow(true);
-      })
-      .catch(err => {
-        console.log(err);
+  searchHendler(userQuery)
+    .then(data => {
+      if (data.length === 0)
         iziToast.error({
-          message: 'Please, try again',
+          message:
+            'Sorry, there are no images matching your search query. Please try again!',
         });
+      renderImg(data);
+      isGalleryShow(true);
+    })
+    .catch(err => {
+      console.log(err);
+      iziToast.error({
+        message: 'Please, try again',
       });
-  }, 1500);
+    })
+    .finally(formEl.reset(), isLoaderON(false));
 }
+
 function isLoaderON(bool) {
   bool
     ? loader.classList.remove('visually-hidden')
